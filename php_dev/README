@@ -1,0 +1,12 @@
+Dockerfile to build a local PHP dev environment
+
+To build the container, enter:
+  podman build --tag <desired_image_name> ./
+
+To create the container, enter:
+  podman create -d -p 8080:80 -v <path_to_project_dir>:/var/www/html/ --name <desired_container_name> <image_name>
+
+To launch the container, enter:
+  podman start <container_name>
+
+You can now access your server at 127.0.0.1:8080
